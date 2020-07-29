@@ -61,3 +61,19 @@ footer {
   justify-content: center;
   align-items: center;
 }
+
+code {
+  background: lightskyblue;
+  padding: 15px;
+  margin: 10px 0;
+  font-family: default;
+  font-size: .8rem;
+  display: block;
+}
+
+p code {
+  margin: 0;
+  padding: 5px;
+  border-radius: 5px;
+  display: inline-block;
+}
