@@ -116,6 +116,23 @@
 
     <section>
       <h2>Math, though.</h2>
+      <p>
+        However, mathematicians might say - why would you do recursion? You don't need that!
+        And yeah, we don't. With a little bit of trickery, we can find a function that outputs
+        the correct Fibonacci number without ever needing to compute the previous one.
+        How about this:
+      </p>
+
+      <code>
+        const fib = n => Math.round((.5 + 1.25 ** .5)) ** n * .2 ** .5);
+      </code>
+
+      <p>
+        Wait, what?? that actually works? Wellm, yeah, until the 71st Fibonacci number, when
+        the inaccuracy of the floats in the math expressions start acting up and the
+        mathematical function actually gives a value that is off by 1. Bummer, but 70 correct
+        ones with barely any memory usage is pretty good!
+      </p>
     </section>
 
     <section>
