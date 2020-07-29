@@ -1,42 +1,93 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Fibonacci numbers</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header class="header">
-      <h1 class="header-title">Fibonacci numbers</h1>
-    </header>
 
-    <main class="main">
-      <section>
-        <h2>Introduction</h2>
-      </section>
+<head>
+  <title>Fibonacci numbers</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
 
-      <section>
-        <h2>Recursion</h2>
-      </section>
+<body>
+  <header class="header">
+    <h1 class="header-title">Fibonacci numbers</h1>
+  </header>
 
-      <section>
-        <h2>A way around the inefficiency</h2>
-      </section>
-
-      <section>
-        <h2>Math, though.</h2>
-      </section>
-
-      <section>
-        <h2>Conclusion</h2>
-      </section>
-    </main>
-
-    <footer>
+  <main class="main">
+    <section>
+      <h2>Introduction</h2>
       <p>
-        Made by vrugthagel
+        The Fibonacci numbers are a simple mathematical sequence of integers,
+        defined by the following pattern.
       </p>
-    </footer>
 
-    <script src="main.js"></script>
-  </body>
+      <code>
+          Fn=Fn-1+Fn-2
+        </code>
+
+      <p>
+        where F0=0 and F1=1. The sequence then becomes 0,1,1,2,3,5,8,13,21 and
+        so on.
+      </p>
+
+      <p>
+        It has a lot of interesting mathematical properties, even its
+        applications in nature, but in this article we will talk about
+        implmenting a Fibonacci function in Javascript.
+      </p>
+    </section>
+
+    <section>
+      <h2>Recursion</h2>
+      <p>
+        in Javascript, we can easly construct any Fibonacci number using
+        recursion, like so...
+      </p>
+
+      <pre>
+        <code>
+            const fib = n => {
+              if(n < 2) return n;
+              return fib(n - 1) + fib(n - 2);
+            };
+        </code>
+      </pre>
+
+      <p>
+        we can even shorten this to <code>const fib = n = => n < 2 ? n : fib(n - 1) + fib(n - 2);</code> if we
+        want to do it in one line. This however is a inefficent implementation. Let's see why
+      </p>
+
+      <p>
+        Let's see what it calculates when we want to know the 4th Fibonacci number. The initial function
+        will return <code>fib(3) + fib(4)</code>, which in turn will return
+        <code>(fib(2) + fib(1)) + (fib(1) + fib(0))</code>.
+        We already see, <code>fib(2)</code> will run twice. For calculating <code>fib(4)</code>, this may not be an
+        issue, but
+        when running <code>fib(23)</code>, we can already see that <code>fib(4)</code> runs 6765 times - not the most
+        efficient
+        code, since we only have to run that once to know what it will be.
+      </p>
+    </section>
+
+    <section>
+      <h2>A way around the inefficiency</h2>
+    </section>
+
+    <section>
+      <h2>Math, though.</h2>
+    </section>
+
+    <section>
+      <h2>Conclusion</h2>
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      Made by vrugthagel
+    </p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+
 </html>
