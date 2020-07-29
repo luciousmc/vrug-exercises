@@ -70,6 +70,48 @@
 
     <section>
       <h2>A way around the inefficiency</h2>
+      <p>
+        A way around this is to save each result in an array. We can simply construct an array with the Fibonacci
+        numbers, and check if the number we want to compute is in the array, and if not, extend the array to be
+        long enough. For example:
+      </p>
+
+      <pre>
+        <code>
+          const fib = n => {
+            const arr = [0, 1];
+            const get = m => {
+              if(arr.length == m) arr.push(arr[m - 1] + arr[m - 2]);
+              if(arr.length > m) return arr[m];
+              else return get(m - 1) + get(m - 2);
+            };
+            return get(n);
+          };
+        </code>
+      </pre>
+
+      <p>
+        this is a lot more effcient, because it remembers the numbers and doesn't run more calculations
+        than it needs to. If we were going to use this function a lot, we can even do something like this:
+      </p>
+
+      <pre>
+        <code>
+          const fib = n => {
+            const get = m => {
+              if(fib._all.length == m) fib._all.push(fib._all[m - 1] + fib._all[m - 2]);
+              if(fib._all.length > m) return fib._all[m];
+              else return get(m - 1) + get(m - 2);
+            };
+            return get(n);
+          };
+          fib._arr = [0, 1];
+        </code>
+      </pre>
+
+      <p>
+        which saves the array for future calls to the <code>fib</code> function;
+      </p>
     </section>
 
     <section>
