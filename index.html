@@ -8,13 +8,16 @@
 
 <body>
   <header class="header">
-    <h1 class="header-title">Fibonacci numbers</h1>
-    <hr class="hr" />
+    <h1 class="header-title">
+      Fibonacci numbers
+      <br />
+      <hr class="hr" />
+    </h1>
   </header>
 
   <main class="main">
     <section>
-      <h2>Introduction</h2>
+      <h2 class="section-title">Introduction</h2>
       <p>
         The Fibonacci numbers are a simple mathematical sequence of integers,
         defined by the following pattern.
@@ -37,7 +40,7 @@
     </section>
 
     <section>
-      <h2>Recursion</h2>
+      <h2 class="section-title">Recursion</h2>
       <p>
         in Javascript, we can easly construct any Fibonacci number using
         recursion, like so...
@@ -70,7 +73,7 @@
     </section>
 
     <section>
-      <h2>A way around the inefficiency</h2>
+      <h2 class="section-title">A way around the inefficiency</h2>
       <p>
         A way around this is to save each result in an array. We can simply construct an array with the Fibonacci
         numbers, and check if the number we want to compute is in the array, and if not, extend the array to be
@@ -116,7 +119,7 @@
     </section>
 
     <section>
-      <h2>Math, though.</h2>
+      <h2 class="section-title">Math, though.</h2>
       <p>
         However, mathematicians might say - why would you do recursion? You don't need that!
         And yeah, we don't. With a little bit of trickery, we can find a function that outputs
@@ -137,7 +140,7 @@
     </section>
 
     <section>
-      <h2>Conclusion</h2>
+      <h2 class="section-title">Conclusion</h2>
       <p>
         What's the conclusion here? Not sure. I think it's good to think about what you want
         from your programs. Do you want efficiency? Do you want accuracy? Do you want readability?
