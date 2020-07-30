@@ -5,9 +5,9 @@
   font-size: 20px;
 }
 
-html, body {
+/* html, body {
   height: 100%;
-}
+} */
 
 body {
   background: whitesmoke;
@@ -48,37 +48,50 @@ p {
   margin-top: .5rem;
 }
 
-#menu-btn {
-  position: absolute;
+.menu-btn {
+  position: fixed;
   top: 3%;
-  left: 2%;
-  background: #fff;
+  left: 1%;
+  background: #bbb;
   width: 50px;
   height: 5px;
   z-index: 100;
   border-radius: 15px;
+  transition: .3s;
 }
 
-#menu-btn:before, #menu-btn:after {
+.menu-btn:before, .menu-btn:after {
   position: absolute;
   content: '';
   width: 50px;
   height: 5px;
-  background: #fff;
+  background: #bbb;
   border-radius: 15px;
   transition: .3s;
 }
 
-#menu-btn:before {
+.menu-btn:before {
   top: -10px;
 }
 
-#menu-btn:after {
+.menu-btn:after {
   top: 10px;
 }
 
-#menu-btn:hover {
+.menu-btn:hover {
   cursor: pointer;
+}
+
+.x {
+  transform: rotate(45deg);
+}
+.x:before {
+  top: 0;
+}
+
+.x:after {
+  top: 0;
+  transform: rotate(90deg);
 }
 
 .menu {
