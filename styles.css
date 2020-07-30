@@ -5,6 +5,10 @@
   font-size: 20px;
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
   background: whitesmoke;
 }
@@ -38,10 +42,66 @@ p {
   width: 80%;
   margin: auto;
   height: 8px;
-  background-color: lightblue;
+  background-color: #0064bd;
   border: 0;
   border-radius: 45px;
   margin-top: .5rem;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20%;
+  height: 100%;
+  border-right: 5px solid #0064bd;
+  background: #333;
+  box-shadow: 0 0 10px black;
+  padding: 1rem 0;
+}
+
+.menu .menu-title {
+  font-size: 2rem;
+  text-align: center;
+  color: gray;
+  margin: 1rem auto;
+}
+
+.nav li {
+  border-width: 1px 0;
+  border-color: gray;
+  border-style: solid;
+  list-style-type: none;
+}
+
+.nav li a {
+  position: relative;
+  color: gray;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: .8rem 0 .8rem 1.2rem;
+  display: block;
+  font-weight: bold;
+}
+
+.nav li a:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 0;
+  height: 100%;
+  background: #eee;
+  opacity: .3;
+  transition: width .2s;
+}
+
+.nav li a:hover {
+  color: #fff;
+}
+
+.nav li a:hover::after {
+  width: 100%;
 }
 
 .main {
@@ -63,10 +123,9 @@ code, pre {
 
 pre {
   position: relative;
-  border-left: 3px solid blue;
+  border-left: 3px solid #0064bd;
   padding: 1rem .9rem;
   display: block;
-  border-left: 3px solid blue;
   margin: .5rem auto;
   overflow-x: auto;
   counter-reset: lineNumber;
