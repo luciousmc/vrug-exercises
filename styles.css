@@ -53,33 +53,51 @@ p {
   font-size: 1.8rem;
 }
 
-code {
-  display: block;
+code, pre {
   background: #e0e0e0;
-  padding: .8rem;
+  border-radius: 5px;
   font-family: monospace;
   font-size: .8rem;
-  border-left: 3px solid gray;
-  border-radius: 5px;
+}
+
+pre {
+  position: relative;
+  border-left: 3px solid blue;
+  padding: 1rem .9rem;
+  display: block;
+  background: #e0e0e0;
+  border-left: 3px solid blue;
   margin: 10px auto;
   overflow-x: auto;
-}
-pre code {
-  border-left: 3px solid blue;
-  padding: .5rem;
+  counter-reset: lineNumber;
 }
 
-p code {
-  margin: 0;
-  padding: 5px;
-  display: inline-block;
-  border: 0;
+pre:before {
+  content: '';
+  position: absolute;
+  width: 30px;
+  border-right: 3px solid gray;
+  height: 100%;
+  top: 0;
 }
 
-span {
+
+pre code:before {
+  counter-increment: lineNumber;
+  content: counter(lineNumber);
+  position: absolute;
+  left: 20px;
+  width: 20px;
+}
+
+
+.fib-formula {
+  display: block;
   font-style: italic;
   font-size: 1rem;
   letter-spacing: 3px;
+  border-left: 3px solid gray;
+  padding: .8rem;
 }
 
 
