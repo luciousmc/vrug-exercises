@@ -10,12 +10,13 @@ body {
 }
 
 h2 {
-  margin: 40px auto;
+  margin: 2rem auto;
 }
 
 p {
-  margin: 15px auto;
-  padding-left: 15px;
+  margin: 1rem auto;
+  padding-left: .8rem;
+  line-height: 1.3rem;
 }
 
 .header {
@@ -29,8 +30,8 @@ p {
   font-size: 3.5rem;
   color: white;
   font-weight: 800;
-  padding-top: 125px;
-  margin-bottom: 10px;
+  padding-top: 6rem;
+  margin-bottom: .5rem;
 }
 
 .hr {
@@ -40,11 +41,11 @@ p {
   background-color: lightblue;
   border: 0;
   border-radius: 45px;
-  margin-top: 10px;
+  margin-top: .5rem;
 }
 
 .main {
-  padding: 20px;
+  padding: 1rem;
   width: 50%;
   margin: auto;
 }
@@ -54,7 +55,7 @@ p {
 }
 
 code, pre {
-  background: #e0e0e0;
+  background: #ddd;
   border-radius: 5px;
   font-family: monospace;
   font-size: .8rem;
@@ -65,9 +66,8 @@ pre {
   border-left: 3px solid blue;
   padding: 1rem .9rem;
   display: block;
-  background: #e0e0e0;
   border-left: 3px solid blue;
-  margin: 10px auto;
+  margin: .5rem auto;
   overflow-x: auto;
   counter-reset: lineNumber;
 }
@@ -81,6 +81,9 @@ pre:before {
   top: 0;
 }
 
+p code {
+  padding: .2rem;
+}
 
 pre code:before {
   counter-increment: lineNumber;
@@ -88,6 +91,7 @@ pre code:before {
   position: absolute;
   left: 20px;
   width: 20px;
+  color: lightslategray;
 }
 
 
@@ -99,9 +103,6 @@ pre code:before {
   border-left: 3px solid gray;
   padding: .8rem;
 }
-
-
-
 
 footer {
   display: flex;

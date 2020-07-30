@@ -58,7 +58,7 @@
       </pre>
 
       <p>
-        we can even shorten this to <code>const fib = n = => n < 2 ? n : fib(n - 1) + fib(n - 2);</code> if we
+        we can even shorten this to <code>const fib = n => n < 2 ? n : fib(n - 1) + fib(n - 2);</code> if we
         want to do it in one line. This however is a inefficent implementation. Let's see why
       </p>
 
@@ -83,17 +83,15 @@
       </p>
 
       <pre>
-        <code>
-          const fib = n => {
-            const arr = [0, 1];
-            const get = m => {
-              if(arr.length == m) arr.push(arr[m - 1] + arr[m - 2]);
-              if(arr.length > m) return arr[m];
-              else return get(m - 1) + get(m - 2);
-            };
-            return get(n);
-          };
-        </code>
+        <code>const fib = n => {
+        <code>  const arr = [0, 1];</code>    
+        <code>  const get = m => {</code>
+        <code>    if(arr.length == m) arr.push(arr[m - 1] + arr[m - 2]);</code>
+        <code>    if(arr.length > m) return arr[m];</code>
+        <code>    else return get(m - 1) + get(m - 2);</code>
+        <code>  };</code>
+        <code>return get(n);</code>
+        <code>};</code>
       </pre>
 
       <p>
@@ -102,17 +100,15 @@
       </p>
 
       <pre>
-        <code>
-          const fib = n => {
-            const get = m => {
-              if(fib._all.length == m) fib._all.push(fib._all[m - 1] + fib._all[m - 2]);
-              if(fib._all.length > m) return fib._all[m];
-              else return get(m - 1) + get(m - 2);
-            };
-            return get(n);
-          };
-          fib._arr = [0, 1];
-        </code>
+        <code>const fib = n => {</code>
+        <code>  const get = m => {</code>
+        <code>    if(fib._all.length == m) fib._all.push(fib._all[m - 1] + fib._all[m - 2]);</code>
+        <code>    if(fib._all.length > m) return fib._all[m];</code>
+        <code>    else return get(m - 1) + get(m - 2);</code>
+        <code>  };</code>
+        <code>  return get(n);</code>
+        <code>};</code>
+        <code>fib._arr = [0, 1];</code>
       </pre>
 
       <p>
@@ -129,9 +125,9 @@
         How about this:
       </p>
 
-      <code>
-        const fib = n => Math.round((.5 + 1.25 ** .5)) ** n * .2 ** .5);
-      </code>
+      <pre>
+        <code>const fib = n => Math.round((.5 + 1.25 ** .5)) ** n * .2 ** .5);</code>
+      </pre>
 
       <p>
         Wait, what?? that actually works? Wellm, yeah, until the 71st Fibonacci number, when
