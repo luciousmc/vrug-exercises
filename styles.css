@@ -14,7 +14,7 @@ h2 {
 }
 
 p {
-  margin: 20px auto;
+  margin: 15px auto;
   padding-left: 15px;
 }
 
@@ -63,17 +63,23 @@ footer {
 }
 
 code {
-  background: lightskyblue;
-  padding: 15px;
-  margin: 10px 0;
-  font-family: default;
-  font-size: .8rem;
   display: block;
+  background: #e0e0e0;
+  padding: .8rem;
+  font-family: monospace;
+  font-size: .8rem;
+  border-left: 3px solid gray;
+  border-radius: 5px;
+  margin: 10px auto;
+}
+pre code {
+  border-left: 3px solid blue;
+  padding: .5rem;
 }
 
 p code {
   margin: 0;
   padding: 5px;
-  border-radius: 5px;
   display: inline-block;
+  border: 0;
 }
