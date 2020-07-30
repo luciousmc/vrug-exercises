@@ -48,16 +48,54 @@ p {
   margin-top: .5rem;
 }
 
+#menu-btn {
+  position: absolute;
+  top: 3%;
+  left: 2%;
+  background: #fff;
+  width: 50px;
+  height: 5px;
+  z-index: 100;
+  border-radius: 15px;
+}
+
+#menu-btn:before, #menu-btn:after {
+  position: absolute;
+  content: '';
+  width: 50px;
+  height: 5px;
+  background: #fff;
+  border-radius: 15px;
+  transition: .3s;
+}
+
+#menu-btn:before {
+  top: -10px;
+}
+
+#menu-btn:after {
+  top: 10px;
+}
+
+#menu-btn:hover {
+  cursor: pointer;
+}
+
 .menu {
   position: fixed;
   top: 0;
-  left: 0;
-  width: 20%;
+  left: -100%;
+  width: 300px;
   height: 100%;
   border-right: 5px solid #0064bd;
   background: #333;
   box-shadow: 0 0 10px black;
   padding: 1rem 0;
+  transition: .3s;
+}
+
+.open {
+  left: 0;
 }
 
 .menu .menu-title {
