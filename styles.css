@@ -48,14 +48,21 @@ p {
   margin-top: .5rem;
 }
 
-.menu-btn {
+#menu-btn-container {
   position: fixed;
-  top: 3%;
-  left: 1%;
+  top: 0;
+  left: 0;
+  padding: 45px;
+  z-index: 100;
+  cursor: pointer;
+}
+
+.menu-btn {
+  position: absolute;
   background: #bbb;
+  left: 25%;
   width: 50px;
   height: 5px;
-  z-index: 100;
   border-radius: 15px;
   transition: .3s;
 }
@@ -76,10 +83,6 @@ p {
 
 .menu-btn:after {
   top: 10px;
-}
-
-.menu-btn:hover {
-  cursor: pointer;
 }
 
 .x {
